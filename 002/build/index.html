@@ -9,6 +9,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
+<script src="js/main.js"></script>
 </head>
 <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
     <header class="bg-teal-700 text-white sticky top-0 z-10">
@@ -17,19 +18,32 @@
            <a href="#hero">🧑‍🎤 OsuwoJr</a>
         </h1>
         <div>
-            <button id="mobile-open-button" class="text-3xl sm:hidden focus:outline-none">
-                &#9776;
+            <button id="hamburger-button" class="text-3xl md:hidden cursor-pointer">
+                ☰
             </button>
-            <nav class="hidden sm:block space-x-8 text-xl" aria-label="main">
+            <nav class="hidden md:block space-x-8 text-xl" aria-label="main">
                 <a href="#myself" class="hover:opacity-90">My Self</a>
                 <a href="#testimonials" class="hover:opacity-90">Testimony</a>
                 <a href="#contact" class="hover:opacity-90">Contact Me</a>
             </nav>
         </div>
        </section> 
+       <section id="mobile-menu"
+       class="top-68 justify-center absolute hidden w-full origin-top animate-open-menu flex-col bg-black text-5xl">
+       <!-- <button class="text-8xl self-end px-6">
+        &times;
+    </button> -->
+       <nav class="flex min-h-screen flex-col items-center py-8" aria-label="mobile">
+         <a href="#hero" class="w-full py-6 text-center hover:opacity-90">Home</a>
+         <a href="#myself" class="w-full py-6 text-center hover:opacity-90">My Self</a>
+         <a href="#testimonials" class="w-full py-6 text-center hover:opacity-90">Testimonials</a>
+         <a href="#contact" class="w-full py-6 text-center hover:opacity-90">Contact Us</a>
+         <a href="#footer" class="w-full py-6 text-center hover:opacity-90">Legal</a>
+       </nav>
+     </section>
     </header>
     <main class="max-w-4xl mx-auto ">
-        <section id="hero" class="flex flex-col-reverse sm:flex-row p-6 items-center gap-8 mb-12 scroll-m-40">
+        <section id="hero" class="flex flex-col-reverse sm:flex-row p-6 items-center gap-8 mb-12 scroll-m-40 widescreen:section-min-height tallscreen:section-min-height">
             <article class="sm:w-1/2">
                 <h2 class="max-w-md text-4xl font-bold text-center sm:text-5xl sm:text-left text-slate-900 dark:text-white"><span class="text-teal-700 dark:text-teal-400">Self-Love </span>is everything...</h2>
                 <p class="max-w-md text-lg text-center sm:text-left text-slate-600 dark:text-slate-400">I am OsuwoJr, and I am a learner, a developer, and a creator of things.</p> 
@@ -40,7 +54,7 @@
             <img class="w-1/2" src="./img/Wone.png" alt="OsuwoJr">
         </section>
         <hr class="mx-auto bg-black dark:bg-white">
-        <section id="myself" class="p-6 my-12 scroll-m-20">
+        <section id="myself" class="p-6 my-12 scroll-m-20 widescreen:section-min-height tallscreen:section-min-height">
             <h2 class="text-3xl font-bold text-slate-900 dark:text-white">My Self</h2>
             <ul class="list-none mx-auto my-12 flex flex-col sm:flex-row items-center gap-8">
                <li class="w-2/3 sm:w-5/6 flex flex-col items-center border border-solid border-slate-900 dark:border-gray-100 bg-white dark:bg-black py-6 px-2 rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
@@ -68,15 +82,92 @@
 
         <hr class="mx-auto bg-black dark:bg-white">
 
-        <section id="myself" class="p-6 my-12">
+        <section id="testimonials" class="p-6 my-12 scroll-mt-20 widescreen:section-min-height tallscreen:section-min-height">
             <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Testimonials</h2>
+            <figure class="my-12">
+                <blockquote class="bg-teal-600 dark:bg-black pl-14 pr-8 py-12 rounded-3xl relative">
+                    <p class="my-12 sm:text-3xl text-left mt-2 text-white dark:text-slate-400 
+                    before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-white before:opacity-25 before:transform before:-translate-x-2 before:translate-y-2
+                    after:content-['\201D']  after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-white after:opacity-25 after:transform after:-translate-x-2 after:-translate-y-2 " >
+                        Osuwojr is amazing and I would recommend him to anyone.
+                    </p>
+                    
+                </blockquote>
+                <figcaption class="italic text-xl sm:text-2xl text-right mt-2 text-slate-500 dark:text-slate-400">
+                    &#8212; McThuraKe, Opiyo.Sr
+                </figcaption>
+            </figure>
+            <figure class="my-12">
+                <blockquote class="bg-teal-600 dark:bg-black pl-14 pr-8 py-12 rounded-3xl relative">
+                    <p class="my-12 sm:text-3xl text-left mt-2 text-white dark:text-slate-400 
+                    before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-white before:opacity-25 before:transform before:-translate-x-2 before:translate-y-2
+                    after:content-['\201D']  after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-white after:opacity-25 after:transform after:-translate-x-2 after:-translate-y-2 ">
+                        At first I thought that he was giving too much pressure but then I realised that he just wanna win.<span class="italic">The best team player!</span> he is no 🧢.
+                    </p>
+                    
+                </blockquote>
+                <figcaption class="italic text-xl sm:text-2xl text-right mt-2 text-slate-500 dark:text-slate-400">
+                    &#8212; Amschel, Senior WebDev
+                </figcaption>
+            </figure>
+            <figure class="my-12">
+                <blockquote class="bg-teal-600 dark:bg-black pl-14 pr-8 py-12 rounded-3xl relative">
+                    <p class="my-12 sm:text-3xl text-left mt-2 text-white dark:text-slate-400 
+                    before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-white before:opacity-25 before:transform before:-translate-x-2 before:translate-y-2
+                    after:content-['\201D']  after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-white after:opacity-25 after:transform after:-translate-x-2 after:-translate-y-2 ">
+                        This is exactly what I  &#8212;<span class="italic">ordered</span>&#8212;A reliable artist freelancer.<q>I love OsuwoJr</q> Nice beats,amazing lyrics,timely delivery.
+                    </p>
+                    
+                </blockquote>
+                <figcaption class="italic text-xl sm:text-2xl text-right mt-2 text-slate-500 dark:text-slate-400">
+                    &#8212; Alice Karun, ContentCreator.Netherlands
+                </figcaption>
+            </figure>
+            <figure class="my-12">
+                <blockquote class="bg-teal-600 dark:bg-black pl-14 pr-8 py-12 rounded-3xl relative">
+                    <p class="my-12 sm:text-3xl text-left mt-2 text-white dark:text-slate-400 
+                    before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-white before:opacity-25 before:transform before:-translate-x-2 before:translate-y-2
+                    after:content-['\201D']  after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-white after:opacity-25 after:transform after:-translate-x-2 after:-translate-y-2 ">
+                       It is the versatility, risky creativity and dedication of OsuwoJr that ameets all expectations.I ended up getting much more than I bargained for.💯 
+                    </p>
+                    
+                </blockquote>
+                <figcaption class="italic text-xl sm:text-2xl text-right mt-2 text-slate-500 dark:text-slate-400">
+                    &#8212; Abiud Ombati, Creative Enthusiast &amp; Artist
+                </figcaption>
+            </figure>
         </section>
 
         <hr class="mx-auto bg-black dark:bg-white">
 
-        <section id="myself" class="p-6 my-12">
+        <section id="contact" class="p-6 my-12 scroll-mt-16 widescreen:section-min-height tallscreen:section-min-height">
             <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Contact Me</h2>
+            <form action="https://formspree.io/f/xnqoykzy" method="POST">
+                <label for="subject">Say it!</label>
+                <input type="text" id="subject" name="subject" required minlength="3" maxlength="60" placeholder="Your subject here" class="w-full text-black text-2xl sm:text-3xl p-3 rounded-xl border-solid border-slate-900 dark:border-none "/>
+                <label for="message">Explain it!</label>
+                <textarea name="message" id="message" required minlength="10" placeholder="Your message here" class="w-full text-black text-2xl sm:text-3xl p-3 rounded-xl border-solid border-slate-900 dark:border-none "></textarea>
+               <button type="submit" class="bg-teal-700 hover:bg-teal-600 active:bg-teal-900 text-white p-3 rounded-xl border border-solid border-slate-900 dark:border-none">DONE</button>
+            </form>
         </section>
     </main>
+    <footer id="footer" class="bg-teal-700 text-white text-xl">
+        <section class="max-4xl mx-auto p-4 flex flex-col sm:flex-row sm:justify-between">
+            <address>
+                <h2>© 2024 OsuwoJr</h2>
+                <h2>Created with ❤️ by <a href="https://twitter.com/OsuwoJr" class="hover:opacity-90">OsuwoJr</a></h2>
+                <h2><a href="https://github.com/OsuwoJr" class="hover:opacity-90">Github</a></h2>
+                <a href="mailto:osuwojr@gmail.com" class="hover:opacity-90">osuwojr@gmail.com</a>
+                <a href="https://wa.me/25490932575" class="hover:opacity-90">+25490932575</a>
+            </address>
+            <nav class="hidden md:flex flex-col gap-2 aria-label="footer">
+                <a href="#myself" class="hover:opacity-90">My Self</a><a href="#testimonials" class="hover:opacity-90">Testimony</a><a href="#contact" class="hover:opacity-90">Contact Me</a></a>
+            </nav>
+            <div class="flex flex-col sm:gap-2 sm:flex-row">
+                <p class="text-right">&#169; 2024</p>
+                <p class="text-right">All Rights Reserved</p>
+            </div>
+        </section>
+    </footer>
 </body>
 </html>
